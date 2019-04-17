@@ -97,3 +97,12 @@ function makeOriginalSize() {
         this.height = 100;
         this.width = 100;
     }
+}
+
+
+// function that removes all children from planning div
+function removeAllChildrenFromPlanningArea() {
+    while ($("planning_div").hasChildNodes()) {
+        $("planning_div").removeChild($("planning_div").lastChild);
+    }
+}
