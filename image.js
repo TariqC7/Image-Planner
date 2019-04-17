@@ -106,3 +106,19 @@ function removeAllChildrenFromPlanningArea() {
         $("planning_div").removeChild($("planning_div").lastChild);
     }
 }
+
+// function that adds a url as image to planning area
+function addImagesToPlanningArea(url) {
+    // create element to place the image
+    var image = document.createElement("img");
+    image.src = url;
+    image.className = "thumbnail_image";
+
+    // find the right size to display as
+    var original_height = image.originalHeight;
+    var original_width = image.originalWidth;
+
+    if (original_height > 100 && original_width > 100) {
+        image.width = 100;
+        image.height = 100;
+    }
