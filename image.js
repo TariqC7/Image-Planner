@@ -84,3 +84,16 @@ function zoomIn() {
         this.width = 500;
     }
 }
+
+// function to make image transform to original size on leaving hover
+function makeOriginalSize() {
+    var x = this.originalHeight;
+    var y = this.originalWidth;
+
+    if (x < 100 && y < 100) {
+        this.height = x;
+        this.width = y;
+    } else {
+        this.height = 100;
+        this.width = 100;
+    }
