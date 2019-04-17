@@ -131,3 +131,19 @@ function addImagesToPlanningArea(url) {
     // add to the planning area as a child node
     $("planning_div").appendChild(image);
 }
+
+// iterates through the images url and diplays images in planning area
+function displayPlanningArea() {
+
+    // remove all from the planning Area
+    removeAllChildrenFromPlanningArea();
+    var count;
+    for (count = 0; count < imagePlanning.length; count += 1) {
+        addImagesToPlanningArea(imagePlanning[count]);
+    }
+}
+
+// adds image to the planning area given the url
+function addUrlToPlanningArea(url) {
+    imagePlanning.push(url);
+    displayPlanningArea();
