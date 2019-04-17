@@ -53,3 +53,20 @@ function displayError(err) {
 function removeError() {
     $("error_statement").innerHTML = "";
 }
+
+// checks if url is valid
+function isValidUrl(url) {
+    var expression = /[a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+
+    var regex = new RegExp(expression);
+    return url.match(regex);
+}
+
+
+function showUrl() {
+    // remove all erros on button clicks
+    removeError();
+
+    // display the url in the input box
+    $("input_url").value = this.src;
+}
