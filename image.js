@@ -70,3 +70,17 @@ function showUrl() {
     // display the url in the input box
     $("input_url").value = this.src;
 }
+
+// function that zooms an image on hover
+function zoomIn() {
+    var x = this.originalHeight;
+    var y = this.originalWidth;
+
+    if (x < 500 && y < 500) {
+        this.height = x;
+        this.width = y;
+    } else {
+        this.height = 500;
+        this.width = 500;
+    }
+}
