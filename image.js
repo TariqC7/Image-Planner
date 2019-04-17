@@ -22,3 +22,16 @@ function deleteImage() {
         displayError("URL cannot be empty and must be valid");
     }
 }
+
+// on clicking the add button
+function addImage() {
+    removeError();
+    var inputurl = document.getElementById("input_url").value;
+
+    // if valid then add image
+    if (isValidUrl(inputurl)) {
+        addUrlToPlanningArea(inputurl);
+    } else {
+        displayError("URL cannot be empty and must be valid");
+    }
+}
