@@ -122,3 +122,12 @@ function addImagesToPlanningArea(url) {
         image.width = 100;
         image.height = 100;
     }
+    
+    // add click and hover functionalities
+    image.observe("click", showUrl);
+    image.observe("mouseover", zoomIn);
+    image.observe("mouseout", makeOriginalSize);
+
+    // add to the planning area as a child node
+    $("planning_div").appendChild(image);
+}
