@@ -147,3 +147,4 @@ function displayPlanningArea() {
 function addUrlToPlanningArea(url) {
     imagePlanning.push(url);
     displayPlanningArea();
+}
