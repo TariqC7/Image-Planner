@@ -17,3 +17,8 @@ function deleteImage() {
                 return;
             }
         }
+        displayError("Image not in your planning Area");
+    } else {
+        displayError("URL cannot be empty and must be valid");
+    }
+}
