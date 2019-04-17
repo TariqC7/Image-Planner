@@ -35,3 +35,21 @@ function addImage() {
         displayError("URL cannot be empty and must be valid");
     }
 }
+
+window.onload = function () {
+    // add event handlers to buttons
+    $("add_btn").onclick = addImage;
+    $("delete_btn").onclick = deleteImage;
+};
+
+
+// function that displays erros in red font below the controls
+function displayError(err) {
+    document.getElementById("error_statement").innerHTML = err;
+}
+
+
+// removes the error statement from the error div
+function removeError() {
+    $("error_statement").innerHTML = "";
+}
